@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     {
         float dir = 0.0f;
 
-        // Å°ÀÔ·Â Ã¼Å©
+        // í‚¤ìž…ë ¥ ì²´í¬
         //dir = Input.GetAxisRaw("Horizontal");
         if (true == Input.GetKey(KeyCode.LeftArrow))
         {
@@ -34,19 +34,19 @@ public class PlayerMove : MonoBehaviour
         }
         //Debug.Log("dir = " + dir);
 
-        // Å° ¹æÇâ¿¡ µû¸¥ ÀÌ¹ÌÁö ¹ÝÀü
+        // í‚¤ ë°©í–¥ì— ë”°ë¥¸ ì´ë¯¸ì§€ ë°˜ì „
         if (dir != 0.0f)
         {
             //transform.localScale = new Vector2(dir, 1);
             spriteRenderer.flipX = (dir == -1.0f ? true : false);
         }
 
-        // ¼Óµµ Àû¿ë
+        // ì†ë„ ì ìš©
         rigidbody2D.AddForce(Vector2.right * dir, ForceMode2D.Impulse);
         //rigidbody2D.AddForce(Vector2.right * dir);
         //rigidbody2D.linearVelocityX = dir;
 
-        // ÃÖ´ë ¼Óµµ Á¦¾î
+        // ìµœëŒ€ ì†ë„ ì œì–´
         if (Mathf.Abs(rigidbody2D.linearVelocityX) >= maxSpeed)
         {
             rigidbody2D.linearVelocityX = dir * maxSpeed;
@@ -70,6 +70,7 @@ public class PlayerMove : MonoBehaviour
 
     void reStart()
     {
+        // í…ŒìŠ¤íŠ¸ ì½”ë“œ
         if(transform.position.y < -10)
         {
             rigidbody2D.linearVelocity = Vector2.zero;
