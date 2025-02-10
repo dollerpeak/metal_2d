@@ -1057,6 +1057,14 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2689346963129671803, guid: 145e5419b227bda459ab1724bb061103, type: 3}
+      propertyPath: jumpPower
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817129176530347028, guid: 145e5419b227bda459ab1724bb061103, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3864882519843344518, guid: 145e5419b227bda459ab1724bb061103, type: 3}
       propertyPath: m_Name
       value: player
